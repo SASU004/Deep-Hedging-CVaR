@@ -1,77 +1,65 @@
 # Deep Hedging with CVaR Optimization
 
-> A quantitative finance project that combines Black-Scholes theory, synthetic market simulation, deep learning, and risk-aware optimization to learn hedging strategies for options portfolios.
+<p align="center">
+  <img src="assets/hero_banner.png" width="100%">
+</p>
+
+<p align="center">
+  <b>Learning Robust Hedging Policies for Options Portfolios using Deep Learning and Risk-Aware Optimization</b>
+</p>
 
 ---
 
-## Project Overview
+## Overview
 
 Traditional option hedging relies on Black-Scholes Delta Hedging.
 
-While effective in theory, real markets contain:
+While effective under ideal assumptions, real markets contain:
 
-* Transaction Costs
-* Volatility Shocks
-* Market Crashes
-* Gap Events
-* Extreme Tail Risks
+- Transaction Costs
+- Market Crashes
+- Flash Crashes
+- Gap Events
+- Volatility Regime Changes
+- Tail Risk
 
-This project investigates whether a Deep Hedger can learn hedge positions that remain robust under these realistic conditions.
+This project explores whether a Deep Hedger can learn hedge positions that outperform traditional delta hedging under realistic market conditions.
 
-The objective is not to predict stock prices.
+The objective is **not to predict stock prices**.
 
-The objective is to learn a hedging policy that minimizes portfolio risk.
-
----
-
-## Key Features
-
-### Market Data Layer
-
-* Real NIFTY Futures Data
-* Real NIFTY Options Data
-* Implied Volatility Estimation
-
-### Quantitative Finance Layer
-
-* Black-Scholes Pricing
-* Delta
-* Gamma
-* Theta
-* Delta Hedging Benchmark
-
-### Simulation Layer
-
-* Geometric Brownian Motion (GBM)
-* Synthetic Market Generation
-* Multi-Path Monte Carlo Simulation
-
-### Deep Learning Layer
-
-* Deep Hedger Neural Network
-* Learned Hedge Positions
-* State-Based Hedging Decisions
-
-### Risk Optimization Layer
-
-* Value at Risk (VaR)
-* Conditional Value at Risk (CVaR)
-
-### Realistic Market Layer
-
-* Transaction Cost Modelling
-* Cost-Aware Hedging
-
-### Stress Testing Layer
-
-* Market Crash Scenarios
-* Gap-Up Scenarios
-* Flash Crash Scenarios
-* Volatility Explosion Scenarios
+The objective is to **learn a hedging policy that minimizes portfolio risk**.
 
 ---
 
-## Project Workflow
+## Tech Stack
+
+<p align="left">
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+
+![SciPy](https://img.shields.io/badge/SciPy-8CAAE6?style=for-the-badge&logo=scipy&logoColor=white)
+
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge)
+
+</p>
+
+---
+
+## System Architecture
+
+The complete Deep Hedging pipeline:
+
+<p align="center">
+  <img src="assets/architecture_diagram.jpg" width="90%">
+</p>
+
+Pipeline:
 
 ```text
 Real Market Data
@@ -82,9 +70,9 @@ Greeks
         ↓
 Black-Scholes Benchmark
         ↓
-GBM Market Simulation
+GBM Synthetic Markets
         ↓
-Deep Hedger Training
+Deep Hedger Neural Network
         ↓
 CVaR Optimization
         ↓
@@ -97,91 +85,176 @@ Risk Comparison
 
 ---
 
-## Strategy Comparison
+## Deep Hedging Concept
 
-The notebook evaluates:
+Traditional delta hedging follows a rule-based strategy.
 
-### No Hedge
+The Deep Hedger learns hedge positions directly from simulated market environments and optimizes for tail-risk reduction.
 
-Portfolio remains completely exposed to market risk.
-
-### Black-Scholes Hedge
-
-Traditional delta-based hedging strategy.
-
-### Deep Hedger
-
-Neural-network-based hedge policy optimized using CVaR.
+<p align="center">
+  <img src="assets/deep_hedging_concept.png" width="90%">
+</p>
 
 ---
 
-## Risk Metrics
+## Transaction Costs
 
-The following metrics are used:
+Real trading is not free.
 
-* Mean PnL
-* Standard Deviation
-* VaR
-* CVaR
-* Worst Loss
-* Transaction Cost Impact
+Frequent rebalancing may reduce risk but can also destroy profitability through excessive transaction costs.
+
+This project incorporates transaction costs directly into the hedging framework.
+
+<p align="center">
+  <img src="assets/transaction_costs.png" width="100%">
+</p>
+
+---
+
+## Risk Distribution Analysis
+
+Comparison of portfolio profit-and-loss distributions across different hedging approaches.
+
+<p align="center">
+  <img src="assets/pnl_distribution.png" width="80%">
+</p>
+
+Key observation:
+
+- Deep Hedger achieves lower tail risk.
+- CVaR improves robustness against extreme losses.
+- Distribution shifts toward more favorable outcomes.
+
+---
+
+## Key Risk Metrics
+
+Out-of-sample evaluation comparing:
+
+- No Hedge
+- Black-Scholes Hedge
+- Deep Hedger (CVaR)
+
+<p align="center">
+  <img src="assets/risk_metrics.png" width="80%">
+</p>
+
+Metrics include:
+
+- Mean PnL
+- Standard Deviation
+- VaR
+- CVaR
+- Worst Loss
+- Trading Frequency
+- Transaction Cost Impact
 
 ---
 
 ## Stress Testing
 
-Strategies are evaluated under:
+The framework evaluates hedging performance under extreme market scenarios.
 
-* Market Crash
-* Flash Crash
-* Gap-Up Event
-* Volatility Explosion
+Scenarios include:
 
-This helps measure robustness beyond normal market conditions.
+- Market Crash
+- Gap Up
+- Flash Crash
+- Volatility Explosion
+
+<p align="center">
+  <img src="assets/stress_testing_scenarios.jpg" width="85%">
+</p>
+
+The objective is to measure robustness beyond normal market conditions.
 
 ---
 
-## Roadmap Status
+## Project Summary
+
+<p align="center">
+  <img src="assets/project_summary.png" width="80%">
+</p>
+
+---
+
+## Implemented Features
+
+### Market Data Layer
+
+- Real NIFTY Futures Data
+- Real NIFTY Options Data
+- Implied Volatility Estimation
+
+### Quantitative Finance Layer
+
+- Black-Scholes Pricing
+- Delta
+- Gamma
+- Theta
+- Delta Hedging Benchmark
+
+### Simulation Layer
+
+- Geometric Brownian Motion (GBM)
+- Synthetic Market Generation
+- Monte Carlo Market Paths
+
+### Deep Learning Layer
+
+- Deep Hedger Neural Network
+- Learned Hedge Policies
+
+### Risk Optimization Layer
+
+- Value at Risk (VaR)
+- Conditional Value at Risk (CVaR)
+
+### Market Realism Layer
+
+- Transaction Costs
+- Cost-Aware Hedging
+
+### Stress Testing Layer
+
+- Market Crash
+- Flash Crash
+- Gap-Up Event
+- Volatility Explosion
+
+---
+
+## Roadmap Progress
 
 ### Beginner Stage
 
-* Real Market Data
-* Black-Scholes
-* Greeks
-* Implied Volatility
-* Delta Hedging
+✅ Complete
 
-Status: Complete
+- Futures
+- Options
+- Greeks
+- Implied Volatility
+- Black-Scholes
+- Delta Hedging
 
 ### Intermediate Stage
 
-* Deep Hedger
-* CVaR Optimization
-* Transaction Costs
-* Stress Testing
-* Comparative Evaluation
+✅ Complete
 
-Status: Complete
+- Deep Hedging
+- CVaR Optimization
+- Transaction Costs
+- Stress Testing
+- Comparative Evaluation
 
 ### Advanced Stage
 
-Future work includes:
+🔄 Future Work
 
-* Adversarial Market Generation
-* Robust Hedging
-* Advanced Market Regime Simulation
-
----
-
-## Tech Stack
-
-* Python
-* NumPy
-* Pandas
-* SciPy
-* PyTorch
-* Matplotlib
-* Jupyter Notebook
+- Adversarial Market Generation
+- Robust Hedging
+- Regime-Switching Markets
+- Advanced Market Simulators
 
 ---
 
@@ -191,9 +264,18 @@ Future work includes:
 Deep-Hedging-CVaR/
 │
 ├── Deep_Hedger.ipynb
-├── datasets/
 ├── README.md
-└── LICENSE
+├── LICENSE
+│
+└── assets/
+    ├── hero_banner.png
+    ├── architecture_diagram.jpg
+    ├── deep_hedging_concept.png
+    ├── transaction_costs.png
+    ├── pnl_distribution.png
+    ├── risk_metrics.png
+    ├── stress_testing_scenarios.jpg
+    └── project_summary.png
 ```
 
 ---
@@ -202,7 +284,7 @@ Deep-Hedging-CVaR/
 
 Can a Deep Neural Network learn a hedging strategy that performs better than traditional Black-Scholes hedging under transaction costs and extreme market stress?
 
-This notebook explores that question through simulation, optimization, and comparative risk analysis.
+This project explores that question through simulation, optimization, and comparative risk analysis.
 
 ---
 

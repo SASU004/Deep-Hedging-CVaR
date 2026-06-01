@@ -33,7 +33,7 @@ The objective is to **learn a hedging policy that minimizes portfolio risk**.
 
 ## Tech Stack
 
-<p align="left">
+<p align="center">
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
@@ -250,28 +250,6 @@ The objective is to measure robustness beyond normal market conditions.
 - Robust Hedging
 - Regime-Switching Markets
 - Advanced Market Simulators
-
----
-
-## Repository Structure
-
-```text
-Deep-Hedging-CVaR/
-│
-├── Deep_Hedger.ipynb
-├── README.md
-├── LICENSE
-│
-└── assets/
-    ├── hero_banner.png
-    ├── architecture_diagram.jpg
-    ├── deep_hedging_concept.png
-    ├── transaction_costs.png
-    ├── pnl_distribution.png
-    ├── risk_metrics.png
-    ├── stress_testing_scenarios.jpg
-    └── project_summary.png
-```
 
 ---
 

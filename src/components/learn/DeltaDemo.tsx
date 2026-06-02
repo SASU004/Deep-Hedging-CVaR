@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { Section } from "@/components/sections/Section";
 import { SectionHeader } from "@/components/sections/SectionHeader";
+import { deltaSchema } from "@/lib/validation";
 
 const STOCK_START = 100;
 const STOCK_END = 101;
@@ -51,7 +52,10 @@ export function DeltaDemo() {
               max={1}
               step={0.01}
               value={delta}
-              onChange={(e) => setDelta(parseFloat(e.target.value))}
+              onChange={(e) => {
+                const parsed = deltaSchema.safeParse(e.target.value);
+                if (parsed.success) setDelta(parsed.data);
+              }}
               className="mt-4 h-2 w-full cursor-pointer appearance-none rounded-full bg-bg-secondary accent-accent [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-accent [&::-webkit-slider-thumb]:shadow-[0_0_12px_rgba(255,122,0,0.5)]"
             />
 

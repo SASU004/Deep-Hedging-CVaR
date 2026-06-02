@@ -1,7 +1,10 @@
 /**
  * HedgeLab design tokens — black + orange monochrome palette.
  * Use for programmatic styling (charts, canvas, inline styles).
+ * Layout/surface tokens: @/config/design-system
  */
+
+export { ds } from "./design-system";
 
 export const colors = {
   background: "#0B0B0B",

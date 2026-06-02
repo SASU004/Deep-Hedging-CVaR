@@ -6,6 +6,7 @@ import { ChevronDown } from "lucide-react";
 import { Section } from "@/components/sections/Section";
 import { SectionHeader } from "@/components/sections/SectionHeader";
 import { cn } from "@/lib/cn";
+import { cardExpandTransition, hoverLift, viewportOnce } from "@/lib/motion";
 import { concepts } from "./data/concepts";
 
 export function ConceptCards() {
@@ -35,7 +36,7 @@ export function ConceptCards() {
               layout
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
+              viewport={viewportOnce}
               transition={{ delay: index * 0.05, duration: 0.4 }}
               onClick={() => toggle(concept.id)}
               className={cn(
@@ -45,7 +46,7 @@ export function ConceptCards() {
                   ? "border-accent/40 bg-[#1a1a1a] sm:col-span-2 lg:col-span-2"
                   : "border-border hover:border-accent/30 hover:bg-[#1a1a1a]"
               )}
-              whileHover={{ y: -4, transition: { duration: 0.2 } }}
+              whileHover={hoverLift}
             >
               <div className="p-5 sm:p-6">
                 <div className="flex items-start justify-between gap-3">
@@ -81,7 +82,7 @@ export function ConceptCards() {
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                      transition={cardExpandTransition}
                       className="overflow-hidden"
                     >
                       <p className="mt-4 border-t border-border-subtle pt-4 text-sm leading-relaxed text-foreground/90">

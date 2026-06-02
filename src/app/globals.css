@@ -40,6 +40,21 @@ body {
   font-family: var(--font-geist-sans), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 ::selection {
@@ -57,4 +72,19 @@ body {
 
 .bg-grid-fade {
   mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 75%);
+}
+
+/* Section rhythm divider */
+.section-divider {
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* Consistent interactive surface */
+.surface-interactive {
+  transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.surface-interactive:hover {
+  border-color: color-mix(in srgb, var(--accent-primary) 30%, var(--border-default));
 }

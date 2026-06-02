@@ -1,4 +1,5 @@
 import { cn } from "@/lib/cn";
+import { ds } from "@/config/design-system";
 
 type CardProps = React.HTMLAttributes<HTMLDivElement> & {
   hover?: boolean;
@@ -22,10 +23,9 @@ export function Card({
   return (
     <div
       className={cn(
-        "rounded-xl border border-border bg-bg-card",
+        ds.card.base,
         paddingMap[padding],
-        hover &&
-          "transition-colors duration-200 hover:border-accent/30 hover:bg-[#1a1a1a]",
+        hover && ds.card.hover,
         className
       )}
       {...props}

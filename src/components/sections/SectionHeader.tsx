@@ -1,4 +1,5 @@
 import { cn } from "@/lib/cn";
+import { ds } from "@/config/design-system";
 
 type SectionHeaderProps = {
   eyebrow?: string;
@@ -23,16 +24,10 @@ export function SectionHeader({
         className
       )}
     >
-      {eyebrow && (
-        <p className="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-accent">
-          {eyebrow}
-        </p>
-      )}
-      <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-        {title}
-      </h2>
+      {eyebrow && <p className={cn("mb-3", ds.typography.eyebrow)}>{eyebrow}</p>}
+      <h2 className={ds.typography.h2}>{title}</h2>
       {description && (
-        <p className="mt-4 text-base leading-relaxed text-muted sm:text-lg">{description}</p>
+        <p className={cn("mt-4", ds.typography.body)}>{description}</p>
       )}
     </header>
   );

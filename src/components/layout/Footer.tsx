@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { footerNav } from "@/config/navigation";
+import { ds } from "@/config/design-system";
+import { cn } from "@/lib/cn";
 import { Logo } from "./Logo";
 
 export function Footer() {
@@ -27,7 +29,11 @@ export function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-sm text-foreground/80 transition-colors hover:text-accent"
+                    className={cn(
+                      "text-sm text-foreground/80 transition-colors hover:text-accent",
+                      ds.focus.ring,
+                      "rounded-sm"
+                    )}
                   >
                     {item.label}
                   </Link>
@@ -45,7 +51,11 @@ export function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-sm text-foreground/80 transition-colors hover:text-accent"
+                    className={cn(
+                      "text-sm text-foreground/80 transition-colors hover:text-accent",
+                      ds.focus.ring,
+                      "rounded-sm"
+                    )}
                   >
                     {item.label}
                   </Link>

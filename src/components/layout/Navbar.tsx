@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { mainNav } from "@/config/navigation";
+import { ds } from "@/config/design-system";
 import { cn } from "@/lib/cn";
 import { Logo } from "./Logo";
 import { Button } from "@/components/ui/Button";
@@ -58,17 +59,16 @@ export function Navbar() {
               <li key={item.href}>
                 <Link
                   href={item.href}
+                  aria-current={active ? "page" : undefined}
                   className={cn(
-                    "rounded-md px-3 py-2 text-sm transition-colors",
+                    "rounded-md px-3 py-2 text-sm transition-all duration-200",
+                    ds.focus.ring,
                     active
-                      ? "text-foreground"
-                      : "text-muted hover:text-foreground"
+                      ? "bg-accent/10 text-accent"
+                      : "text-muted hover:bg-bg-card/60 hover:text-foreground"
                   )}
                 >
                   {item.label}
-                  {active && (
-                    <span className="mt-0.5 block h-px w-full bg-accent" />
-                  )}
                 </Link>
               </li>
             );
@@ -86,7 +86,10 @@ export function Navbar() {
 
         <button
           type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-border text-foreground lg:hidden"
+          className={cn(
+            "inline-flex h-10 w-10 items-center justify-center rounded-lg border border-border text-foreground lg:hidden",
+            ds.focus.ring
+          )}
           aria-expanded={mobileOpen}
           aria-controls="mobile-nav"
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
@@ -116,9 +119,13 @@ export function Navbar() {
                   <li key={item.href}>
                     <Link
                       href={item.href}
+                      aria-current={active ? "page" : undefined}
                       className={cn(
-                        "block rounded-lg px-3 py-3 text-base",
-                        active ? "bg-bg-card text-foreground" : "text-muted"
+                        "block rounded-lg px-3 py-3 text-base transition-colors",
+                        ds.focus.ring,
+                        active
+                          ? "border border-accent/30 bg-accent/10 text-accent"
+                          : "text-muted hover:bg-bg-card hover:text-foreground"
                       )}
                     >
                       {item.label}

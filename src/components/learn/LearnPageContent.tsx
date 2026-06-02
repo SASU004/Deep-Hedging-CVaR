@@ -6,6 +6,7 @@ import { DeltaDemo } from "./DeltaDemo";
 import { HedgingVisualizer } from "./HedgingVisualizer";
 import { LearnHero } from "./LearnHero";
 import { LearningJourney } from "./LearningJourney";
+import { PlatformJourneyStrip } from "@/components/layout/PlatformJourneyStrip";
 
 export function LearnPageContent() {
   return (
@@ -16,6 +17,7 @@ export function LearnPageContent() {
       <HedgingVisualizer />
       <DeepHedgingComparison />
       <LearningJourney />
+      <PlatformJourneyStrip />
     </>
   );
 }

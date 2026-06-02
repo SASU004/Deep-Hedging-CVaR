@@ -1,6 +1,6 @@
-# HedgeLab
+# QuantForge
 
-Deep hedging research platform — platform shell built with Next.js 15, TypeScript, Tailwind CSS, Framer Motion, and Lucide React.
+AI-Powered Deep Hedging Research Platform — platform shell built with Next.js 15, TypeScript, Tailwind CSS, Framer Motion, and Lucide React.
 
 ## Tech Stack
 

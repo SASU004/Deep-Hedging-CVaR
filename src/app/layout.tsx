@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     template: "%s | QuantForge",
   },
   description:
-    "Interactive Deep Hedging Research Platform for learning, experimentation, strategy comparison, stress testing and risk analytics.",
+    "AI-Powered Deep Hedging Research Platform for learning, experimentation, strategy comparison, stress testing and risk analytics.",
   applicationName: "QuantForge",
   authors: [{ name: "QuantForge" }],
   metadataBase: new URL("https://quantforge.app"),
   openGraph: {
     title: "QuantForge",
     description:
-      "Interactive Deep Hedging Research Platform for learning, experimentation, strategy comparison, stress testing and risk analytics.",
+      "AI-Powered Deep Hedging Research Platform for learning, experimentation, strategy comparison, stress testing and risk analytics.",
     type: "website",
     siteName: "QuantForge",
     images: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
         url: "/og.svg",
         width: 1200,
         height: 630,
-        alt: "QuantForge — Deep Hedging Research Platform",
+        alt: "QuantForge — AI-Powered Deep Hedging Research Platform",
       },
     ],
   },
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "QuantForge",
     description:
-      "Interactive Deep Hedging Research Platform for learning, experimentation, strategy comparison, stress testing and risk analytics.",
+      "AI-Powered Deep Hedging Research Platform for learning, experimentation, strategy comparison, stress testing and risk analytics.",
     images: ["/og.svg"],
   },
   icons: {

@@ -27,7 +27,7 @@ export function ResearchInsights({ insights }: ResearchInsightsProps) {
             <p className="font-mono text-xs uppercase tracking-wider text-accent">
               Research report excerpt
             </p>
-            <p className="text-sm text-muted">HedgeLab · Stage 1 analytics</p>
+            <p className="text-sm text-muted">QuantForge · Stage 1 analytics</p>
           </div>
         </div>
 

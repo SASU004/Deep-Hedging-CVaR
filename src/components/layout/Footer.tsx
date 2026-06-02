@@ -67,7 +67,7 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col gap-4 border-t border-border-subtle pt-8 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-muted">
-            © {year} HedgeLab. Research platform shell—no live market data.
+            © {year} QuantForge. Research platform shell—no live market data.
           </p>
           <Link
             href="/learn"

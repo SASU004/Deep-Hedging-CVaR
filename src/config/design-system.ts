@@ -1,5 +1,5 @@
 /**
- * HedgeLab design system — single source for spacing, motion, surfaces, and interaction.
+ * QuantForge design system — single source for spacing, motion, surfaces, and interaction.
  * Use Tailwind classes in components; use `ds` tokens for programmatic styling.
  */
 

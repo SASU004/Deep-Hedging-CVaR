@@ -10,7 +10,7 @@ export function LabHero() {
       badgeIcon={FlaskConical}
       title={
         <>
-          HedgeLab <span className="text-accent">Simulator</span>
+          QuantForge <span className="text-accent">Simulator</span>
         </>
       }
       subtitle="Experiment with market parameters and observe how risk changes."

@@ -1,4 +1,4 @@
-/** Simplified simulation utilities for the HedgeLab frontend layer. */
+/** Simplified simulation utilities for the QuantForge frontend layer. */
 
 export type MarketParams = {
   volatility: number;

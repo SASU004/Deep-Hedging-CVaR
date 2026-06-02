@@ -45,7 +45,7 @@ export function PlatformPillars() {
       <SectionHeader
         eyebrow="Platform"
         title="Built for the full research loop"
-        description="HedgeLab organizes your workflow from theory to validation—each stage has a dedicated space with consistent tooling and visual language."
+        description="QuantForge organizes your workflow from theory to validation—each stage has a dedicated space with consistent tooling and visual language."
         align="center"
         className="mx-auto"
       />

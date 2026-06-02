@@ -10,7 +10,7 @@ export function ResearchHero() {
       badgeIcon={FileText}
       title={
         <>
-          HedgeLab <span className="text-accent">Research</span>
+          QuantForge <span className="text-accent">Research</span>
         </>
       }
       subtitle="Explore research modules that connect hedging concepts to evaluation workflows — Stage 1 (no notebook integration yet)."

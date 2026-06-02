@@ -1,5 +1,5 @@
 /**
- * HedgeLab design tokens — black + orange monochrome palette.
+ * QuantForge design tokens — black + orange monochrome palette.
  * Use for programmatic styling (charts, canvas, inline styles).
  * Layout/surface tokens: @/config/design-system
  */

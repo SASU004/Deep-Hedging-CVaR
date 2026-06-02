@@ -37,7 +37,7 @@ export function Hero() {
             className="mb-5 inline-flex items-center gap-2 rounded-full border border-border bg-bg-card/80 px-4 py-1.5 font-mono text-xs uppercase tracking-[0.16em] text-muted backdrop-blur-sm"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-            Quantitative hedging research
+            QuantForge · AI-powered deep hedging research
           </motion.p>
 
           <motion.h1

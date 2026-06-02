@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { siteBranding } from "@/config/branding";
 import { footerNav } from "@/config/navigation";
 import { ds } from "@/config/design-system";
 import { cn } from "@/lib/cn";
@@ -67,7 +68,7 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col gap-4 border-t border-border-subtle pt-8 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-muted">
-            © {year} QuantForge. Research platform shell—no live market data.
+            © {year} {siteBranding.name}. {siteBranding.copyrightNote}
           </p>
           <Link
             href="/learn"

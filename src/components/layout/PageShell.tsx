@@ -1,3 +1,4 @@
+import { siteBranding } from "@/config/branding";
 import { cn } from "@/lib/cn";
 
 type PageShellProps = {
@@ -13,7 +14,7 @@ export function PageShell({ title, description, children, className }: PageShell
       <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
         <header className="max-w-2xl border-b border-border-subtle pb-10">
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">
-            QuantForge
+            {siteBranding.name}
           </p>
           <h1 className="mt-3 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
             {title}
